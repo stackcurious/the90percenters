@@ -879,4 +879,10 @@ input:focus, select:focus {
 }
 
 .testimonial {
-    background-color: rgba(255, 255,
+    background-color: rgba(255, 255,);
+}
+
+.beehiiv-embed-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
