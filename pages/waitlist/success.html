@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're On The Waitlist! | The90Percenters</title>
+    
+    <!-- Meta tags for SEO and social sharing -->
+    <meta name="description" content="Thanks for joining The90Percenters waitlist. You'll be among the first to get access when we launch.">
+    
+    <!-- Open Graph tags for social media -->
+    <meta property="og:title" content="You're On The Waitlist! | The90Percenters">
+    <meta property="og:description" content="Thanks for joining The90Percenters waitlist. You'll be among the first to get access when we launch.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://the90percenters.com/pages/waitlist/success.html">
+    <meta property="og:image" content="https://the90percenters.com/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/waitlist.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Success Page Specific Styles */
+        .success-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+        
+        .success-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 60px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(40, 167, 69, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 40px;
+            color: #28a745;
+            position: relative;
+        }
+        
+        .success-icon::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid rgba(40, 167, 69, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .success-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .success-message {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .success-email {
+            font-weight: 700;
+            color: var(--white);
+        }
+        
+        .next-steps {
+            margin-bottom: 40px;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            padding: 30px;
+        }
+        
+        .next-steps h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .steps-list {
+            list-style-position: inside;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .steps-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .steps-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: 700;
+        }
+        
+        .share-section {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .share-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .share-section p {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        
+        .share-button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .twitter {
+            background-color: #1DA1F2;
+            color: white;
+        }
+        
+        .linkedin {
+            background-color: #0077B5;
+            color: white;
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+        
+        .back-link:hover {
+            color: var(--danger);
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+        }
+        
+        @media (max-width: 576px) {
+            .success-card {
+                padding: 40px 20px;
+            }
+            
+            .success-title {
+                font-size: 28px;
+            }
+            
+            .success-message {
+                font-size: 16px;
+            }
+            
+            .share-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-card">
+            <div id="confetti-container"></div>
+            
+            <div class="success-icon">✓</div>
+            <h1 class="success-title">You're on the waitlist!</h1>
+            <p class="success-message">Thanks <span id="user-email" class="success-email"></span> for joining The90Percenters waitlist. You'll be among the first to receive our startup failure analysis when we launch.</p>
+            
+            <div class="next-steps">
+                <h3>What happens next?</h3>
+                <ul class="steps-list">
+                    <li>Check your email for a confirmation message</li>
+                    <li>We'll send occasional updates as we prepare for launch</li>
+                    <li>You'll get early access to our first failure story</li>
+                    <li>We'll notify you as soon as we launch</li>
+                </ul>
+            </div>
+            
+            <div class="share-section">
+                <h3>Help spread the word</h3>
+                <p>Know other founders who could benefit from learning about startup failures?</p>
+                <div class="share-buttons">
+                    <a href="https://twitter.com/intent/tweet?text=I%20just%20joined%20The90Percenters%20waitlist%20to%20learn%20from%20startup%20failures.%20Check%20it%20out%3A%20https%3A//the90percenters.com" target="_blank" class="share-button twitter">
+                        Share on Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://the90percenters.com" target="_blank" class="share-button linkedin">
+                        Share on LinkedIn
+                    </a>
+                </div>
+            </div>
+            
+            <a href="index.html" class="back-link">← Back to home page</a>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Extract email from URL parameters if present
+            const urlParams = new URLSearchParams(window.location.search);
+            const email = urlParams.get('email');
+            const firstName = urlParams.get('firstName');
+            
+            // If email is present, personalize the success message
+            if (email) {
+                const userEmailElement = document.getElementById('user-email');
+                if (userEmailElement) {
+                    if (firstName) {
+                        userEmailElement.textContent = firstName;
+                    } else {
+                        userEmailElement.textContent = email;
+                    }
+                }
+            }
+            
+            // Track conversion
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                    'event_callback': function() {
+                        console.log('Conversion tracked successfully');
+                    }
+                });
+            }
+            
+            // Create confetti animation
+            createConfetti();
+        });
+        
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#ff3b30', '#2997ff', '#ffffff', '#28a745', '#ffc107'];
+            const numConfetti = 100;
+            
+            for (let i = 0; i < numConfetti; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                // Random position, color, size, and animation delay
+                const left = Math.random() * 100;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const size = Math.random() * 10 + 5;
+                const delay = Math.random() * 2;
+                
+                confetti.style.left = `${left}%`;
+                confetti.style.top = '-10px';
+                confetti.style.backgroundColor = color;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.opacity = Math.random() * 0.7 + 0.3;
+                confetti.style.borderRadius = '50%';
+                confetti.style.position = 'absolute';
+                
+                // Animation
+                confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear ${delay}s`;
+                
+                container.appendChild(confetti);
+            }
+            
+            // Add the animation keyframes
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fall {
+                    0% {
+                        transform: translateY(0) rotate(0deg);
+                        opacity: 0;
+                    }
+                    10% {
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: translateY(${window.innerHeight}px) rotate(720deg);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    </script>
+</body>
+</html>
